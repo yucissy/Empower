@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Empower Popup</title>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <script src="popup.js"></script>
+  </head>
+  
+  <body>
+  <div class="login-page" id="login_page">
+    
+    <div class="login-page-header">
+      
+      <row>
+        <a href="http://www.google.com">
+          <img class="login-page-logo" src="EmpowerLogo.png"></img>
+        </a>
+      </row>
+    
+    </div>
+    
+    <div class="login-page-content">
+      <row>
+        
+        <form>
+          <div class="input-group input-login-page">
+            <input type="text" name="username" class="form-control" placeholder="Username" style="border-radius: 5px; width: 240px;">
+          </div>
+          <div class="input-group input-login-page">
+            <input type="password" name="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
+          </div> 
+          <br/>
+          <a href="setup-integrations.html">
+            <button type="button" id="login" class="btn btn-default btn-full-width" style="color: #fff; width:240px; margin:0px 10px; background-color: #DB357A; border-color: #DB357A; padding: 10px 12px;">Log In</button>
+          </a>
+        </form>
+        
+      </row>
+    </div>
+    
+  </div>
+
+
+  </body>
+</html>
+
