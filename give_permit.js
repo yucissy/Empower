@@ -1,49 +1,44 @@
 window.onload = function() {
-	
-
-	
-document.getElementById("cancel").onclick = function cancel() {
-window.close();
-};
-document.getElementById("submit").onclick = function submit() {
-	 Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
-	 var currentUser = Parse.User.current();
-	if (currentUser.name) {
-		// do stuff with the user
-		alert(currentUser);
+	// Check if user is logged in
+	Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
+	var currentUser = Parse.User.current();
+	if (currentUser) {
+		// Send status message
+		console.log('GIVE_PERMIT User logged in: ' + currentUser.get("username"));
 	} else {
-		// show the signup or login page
-	}
- 
-  var standinname = document.getElementById("standinname").value;
-  var gmail = document.getElementById("gmail").value;
-  var gmailpass = document.getElementById("gmailpass").value;
-  var fb = document.getElementById("fb").value;
-  var fbpass = document.getElementById("fbpass").value;
-  var jb = document.getElementById("jb").value;
-  var jbpass = document.getElementById("jbpass").value;
-  
-  
-	// Create a new instance of that class.
-	alert(currentUser+"2");
-	var permissions = new Permissions();
-	permissions.set("user", currentUser);
-	permissions.set("gmail_user", "");
-	permissions.set("gmail_pass", "");
-	permissions.set("gmail_standins", [standinname, "tom"]);
-	
-	permissions.set("fb_user", fb);
-	permissions.set("fb_pass", fbpass);
-	permissions.set("jb_user", jb);
-	permissions.set("jb_pass", jbpass);
-	
-	permissions.save(null, {
-	success: function(permissions) {
-
-	},
-	error: function(permissions, error) {
-
+		// Navigate back to login page
+		console.log('GIVE_PERMIT No user logged in' + currentUser.get("username"));
+		window.location.href="login.html";
 	}
 
-};
+	document.getElementById("cancel").onclick = function cancel() {
+		window.close();
+	};
+
+	document.getElementById("submit").onclick = function submit() {
+		var alias = document.getElementById("alias").value;
+	  var account = document.getElementById("account").value;
+	  var account_username = document.getElementById("account_username").value;
+	  var account_password = document.getElementById("account_password").value;		  
+	  var hours = document.getElementById('hours').value;
+
+		// Create a new instance Permission.
+		var Permissions = Parse.Object.extend("Permissions");
+		var permissions = new Permissions();
+		permissions.set("user", currentUser.get('username'));
+		permissions.set("account", account);
+		permissions.set("account_username", account_username);
+		permissions.set("account_password", account_password);
+		permissions.set("alias", alias);
+		permissions.set("time", hours);
+		
+		permissions.save(null, {
+		success: function(permissions) {
+			console.log('GIVE_PERMIT Permission save successful')
+		},
+		error: function(permissions, error) {
+			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message)
+		}
+		});
+	};
 }
