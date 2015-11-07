@@ -13,7 +13,8 @@ window.onload = function() {
 		  window.location.href="standin.html";
 	  },
 	  error: function(user, error) {
-	    alert("failed");
+      console.log("SIGNIN User signing error");
+	    window.location.href="signup.html";
 	  }
   });
 
