@@ -10,19 +10,9 @@ window.onload = function() {
   
   	
 	var user = new Parse.User();
-	//var Permissions = Parse.Object.extend("Permissions");
-	//var permission = new Permissions();
 
 	user.set("username", name);
 	user.set("password", pass);
-	// Simple syntax to create a new subclass of Parse.Object.
-	var Permissions = Parse.Object.extend("Permissions");
-	
-});
-
-
-	//user.set("email", "test@gmail.com");
-	//user.set("phone", "415-392-0202");
 
 	user.signUp(null, {
 	  success: function(user) {
