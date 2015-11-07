@@ -1,10 +1,16 @@
 window.onload = function() {
+<<<<<<< HEAD
 	
 	
+=======
+Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
+
+>>>>>>> 3a23f2475dbe780f5bbe50f4b40e74cd38a7f0b2
 document.getElementById("cancel").onclick = function cancel() {
 window.close();
 };
 document.getElementById("submit").onclick = function submit() {
+<<<<<<< HEAD
 	 Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
 	 var currentUser = Parse.User.current();
 	if (currentUser.name) {
@@ -45,4 +51,15 @@ document.getElementById("submit").onclick = function submit() {
 	}
 
 };
+=======
+window.close();
+};
+document.getElementById("signout").onclick = function signout() {
+	Parse.User.logOut();
+	chrome.browserAction.setPopup({
+		  	popup: 'login.html'
+	});
+	window.close();
+}
+>>>>>>> 3a23f2475dbe780f5bbe50f4b40e74cd38a7f0b2
 }
