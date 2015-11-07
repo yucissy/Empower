@@ -32,17 +32,17 @@
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
      <script src="popup.js"></script>
-    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+    <script src="parse-1.2.13.min.js"></script>
   </head>
   <body>
   <div id="login_page">
     <h2>Login to Empower</h2>
     <form>
     User:<br>
-    <input type="text" name="username">
+    <input type="text" id="username">
     <br>
     Password:<br>
-    <input type="password" name="password">
+    <input type="password" id="password">
     <br>
     <a href="give_permit.html">
     <button type="button" id="login">Log In</button>
