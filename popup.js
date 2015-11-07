@@ -1,5 +1,6 @@
 
 window.onload = function() {
+	Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
 
 document.getElementById("login").onclick = function(event){
     	event.preventDefault();
@@ -11,6 +12,3 @@ document.getElementById("login").onclick = function(event){
 
 }
 
- 
-    
-    
