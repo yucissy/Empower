@@ -12,7 +12,7 @@
       "matches": ["https://book.jetblue.com/*", "https://www.facebook.com/*", 
       "https://secure.its.yale.edu/cas/login*", "https://sso.brown.edu/idp/Authn/MCB", 
       "https://accounts.google.com/*"],
-      "js": ["background.js"]
+      "js": ["action.js"]
     }
   ],
 
@@ -23,5 +23,6 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"
-  ]
+  ],
+  "web_accessible_resources": ["script.js"]
 }

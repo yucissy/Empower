@@ -1,12 +1,7 @@
-window.onload = function() {
-//   Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
-	
-	  document.getElementById("Cliff_gmail").onclick = function(event){
-	
-		event.preventDefault();
-			console.log("hi");
 
-		if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
+chrome.runtime.onMessage.addListener(
+function(request, sender, sendResponse) {
+			if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
 			var myUsername = 'empowered_user';
 			var myPassword = '123456';
 
@@ -55,7 +50,13 @@ window.onload = function() {
 				userField.value = myUsername;
 			}
 		}
-	}
-}
+		return true;
+
+
+});
+//   Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
+
+	
+
 
 
