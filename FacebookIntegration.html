@@ -1,0 +1,79 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Empower</title>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">    <style src="style.css"></style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  
+  <body>
+  <div class="page-wrapper"> 
+    
+    <div class="header">
+      <div class="header-content-wrapper">
+        <row>
+          <div class="header-logo col-sm-6 pull-left">
+            <img src="EmpowerClearName.png" style="width: 90px;"></img>
+          </div>
+          <div class="header-help col-sm-6 pull-right">
+            <p> help </p>
+          </div>
+        </row>
+      </div>
+    </div> <!-- close header -->
+
+    <div class="content">
+     
+       <row class="row-wrapper">
+          <div class="integration-instructions">
+            <div class="col-emp-3 integration-item">
+              <img class="integration-icon" src="LogoPlaceholder.png"></img>
+              <div class="integration-text">Facebook</div>
+            </div>
+            <div class="col-emp-9" style="padding-top: 25px; padding-left: 10px; padding-right: 10px">
+              <p>Enter the log-in info for the Facbeook you want to set up access to.</p>
+            </div>
+          </div>
+       </row>
+     
+       <row class="row-wrapper" style="padding-top: 80px;">
+         <div class="integration-form" style="padding-top: 120px;">
+            <form>
+              <div class="input-group input">
+                <input type="text" name="email" class="form-control" placeholder="Email"  style="border-radius: 5px; width: 240px;">
+              </div>
+              <div class="input-group input">
+                <input type="password" name="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
+              </div> 
+              <div class="btn-fw-wrapper">
+                <a href="assign_permit.html">
+                  <button type="button" id="submit" class="btn btn-default btn-full-width">Submit</button>
+                </a>  
+              </div>
+            </form>
+         </div>
+       </row>
+
+
+    </div> <!-- close content -->
+  </div> <!-- close page wrapper -->
+  
+  
+  
+  
+  </body>
+</html>

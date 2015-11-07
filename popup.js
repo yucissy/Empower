@@ -4,15 +4,14 @@ window.onload = function() {
 
   document.getElementById("login").onclick = function(event){
   event.preventDefault();
-  alert("success");
-
+		console.log("here");
 	var name = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
 	
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
       console.log("SIGNIN User signed in: " + name);
-		  window.location.href="standin.html";
+		  window.location.href="give_permit.html";
 	  },
 	  error: function(user, error) {
       console.log("SIGNIN User signing error: " + name);
@@ -22,9 +21,8 @@ window.onload = function() {
   });
 
 };
-	document.getElementById("use_permit").onclick = function(event){
-// 		alert("you clicked use!");
-		window.location.href="use_permit.html";
-	};
+	// document.getElementById("use_permit").onclick = function(event){
+// 		window.location.href="use_permit.html";
+// 	};
 }
 

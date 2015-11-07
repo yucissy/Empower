@@ -7,51 +7,49 @@
 <html>
   <head>
     <title>Empower Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        background-color:#2ba5fc;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-      #give_permission {
-        display:none;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-
-     <script src="signup.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    
     <script src="parse-1.6.7.min.js"></script>
+    <script src="popup.js"></script>
   </head>
+  
   <body>
-  <div id="login_page">
-    <h2>Login to Empower</h2>
-    <form>
-    User:<br>
-    <input type="text" id="username">
-    <br>
-    Password:<br>
-    <input type="password" id="password">
-    <br>
-    <button type="button" id="login">Log In</button>
-    <button type="button" id="signup">Sign Up</button>
-    <button type="button" id="use_permit">Use</button>
-    </form>
+  <div class="login-page" id="login_page">
+    
+    <div class="login-page-header">
+      
+      <row>
+        <a href="http://www.google.com">
+          <img class="login-page-logo" src="EmpowerName.png"></img>
+        </a>
+      </row>
+    
+    </div>
+    
+    <div class="login-page-content">
+      <row>
+        
+        <form>
+          <div class="input-group input-login-page">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" style="border-radius: 5px; width: 240px;">
+          </div>
+          <div class="input-group input-login-page">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
+          </div> 
+          <br/>
+          <a href="setup-integrations.html">
+            <button type="button" id="login" class="btn btn-default btn-full-width" style="color: #fff; width:240px; margin:0px 10px; background-color: #DB357A; border-color: #DB357A; padding: 10px 12px;">Log In</button>
+          </a>
+        </form>
+        
+      </row>
+    </div>
+    
   </div>
 
-  
+
   </body>
 </html>
 
