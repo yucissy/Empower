@@ -35,13 +35,15 @@ window.onload = function() {
 		
 		permissions.save(null, {
 		success: function(permissions) {
-			console.log('GIVE_PERMIT Permission save successful')
+			console.log('GIVE_PERMIT Permission save successful');
+			window.location.href="show_permit.html";
 		},
 		error: function(permissions, error) {
-			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message)
+			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message);
 		}
 		});
 	};
+
 	document.getElementById("signout").onclick = function submit() {
 		Parse.User.logOut();
 		chrome.browserAction.setPopup({
