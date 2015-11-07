@@ -16,6 +16,7 @@ window.onload = function() {
 	};
 
 	document.getElementById("submit").onclick = function submit() {
+		alert("clicked");
 		var alias = document.getElementById("alias").value;
 	  var account = document.getElementById("account").value;
 	  var account_username = document.getElementById("account_username").value;
@@ -40,5 +41,12 @@ window.onload = function() {
 			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message)
 		}
 		});
+	};
+	document.getElementById("signout").onclick = function submit() {
+		Parse.User.logOut();
+		chrome.browserAction.setPopup({
+		  	popup: 'login.html'
+		});
+		window.close();
 	};
 }
