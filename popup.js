@@ -9,8 +9,30 @@ window.onload = function() {
   var pass = document.getElementById("password").value;
 
 	var user = new Parse.User();
+	//var Permissions = Parse.Object.extend("Permissions");
+	//var permission = new Permissions();
+
 	user.set("username", name);
 	user.set("password", pass);
+	// Simple syntax to create a new subclass of Parse.Object.
+	var Permissions = Parse.Object.extend("Permissions");
+
+// Create a new instance of that class.
+	var permissions = new Permissions();
+	permissions.set("user", name);
+	permissions.set("gmail_user", "");
+	permissions.set("gmail_pass", "");
+	permissions.set("gmail_standins", ["amy", "tom"]);
+	permissions.save(null, {
+	success: function(permissions) {
+
+	},
+	error: function(permissions, error) {
+
+	}
+});
+
+
 	//user.set("email", "test@gmail.com");
 	//user.set("phone", "415-392-0202");
 
