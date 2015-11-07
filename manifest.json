@@ -5,6 +5,13 @@
   "description": "This extension lets you give others login permissions to your Gmail account.",
   "version": "1.0",
 
+  "content_scripts": [
+    {
+      "matches": ["https://book.jetblue.com/*"],
+      "js": ["action.js"]
+    }
+  ],
+
   "browser_action": {
     "default_icon": "EmpowerLogo.png",
     "default_popup": "login.html"
