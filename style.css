@@ -1,0 +1,194 @@
+body {
+    font-family: "Open Sans", Calibri, sans-serif;
+    font-size: 100%;
+    background-color:#2ba5fc;
+    height: 400px;
+    width: 300px;
+  }
+      
+#status {
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 400px;
+  }
+      
+select {
+    float:left;
+  }
+
+/* ========================  LOGIN PAGE  ======================== */
+/* ========================  LOGIN PAGE  ======================== */
+/* ========================  LOGIN PAGE  ======================== */
+
+
+.login-page {
+    padding: 20px;
+}
+
+.login-page-header {
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 42px;
+    padding-bottom: 62px;
+}
+
+.login-page-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
+    width: 75px;
+  }
+
+.input-page-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 200px;
+}
+
+.input-login-page {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 0px solid #ccc;
+} 
+
+.form-control {
+    padding: 6px 12px;
+    border: 0px;
+}
+
+
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+
+.page-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.header {
+  height: 80px;
+  border: 1px solid #fff;
+}
+
+.header-content-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+}
+
+.header-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.header-help {
+  height: 40px;
+  width: 40px;
+  
+}
+
+.content {
+  height: 320px;
+  border: 1px solid #fff;
+}
+
+.carousel-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+  border: 1px solid #fff;
+}
+
+.integrations-carousel {
+  height: 240px;
+}
+
+.carousel-selectors {
+  height: 20px;
+  border: 1px solid #fff;
+}
+
+.integration-item {
+  border: 1px solid #fff;
+}
+
+.integration-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 40px;
+}
+
+.integration-text {
+  
+}
+
+.btn-fw-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+}
+
+.btn-full-width {
+  padding: 12px 10px;
+  width: 240px;
+}
+
+
+
+
+.col-emp-1, .col-emp-2, .col-emp-3, .col-emp-4, .col-emp-5, .col-emp-6, .col-emp-7, .col-emp-8, .col-emp-9, .col-emp-0, .col-emp-11, .col-emp-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.col-emp-1, .col-emp-2 , .col-emp-3, .col-emp-4, .col-emp-5, .col-emp-6, .col-emp-7, .col-emp-8, .col-emp-9, .col-emp-0, .col-emp-11, .col-emp-12 {
+  float: left;
+}
+.col-emp-12 {
+  width: 100%;
+}
+.col-emp-11 {
+  width: 91.66666667%;
+}
+.col-emp-10 {
+  width: 83.33333333%;
+}
+.col-emp-9 {
+  width: 75%;
+}
+.col-emp-8 {
+  width: 66.66666667%;
+}
+.col-emp-7 {
+  width: 58.33333333%;
+}
+..col-emp-6 {
+  width: 50%;
+}
+.col-emp-5 {
+  width: 41.66666667%;
+}
+.col-emp-4 {
+  width: 33.33333333%;
+}
+.col-emp-3 {
+  width: 25%;
+}
+.col-emp-2 {
+  width: 16.66666667%;
+}
+.col-emp-1 {
+  width: 8.33333333%;
+}
+
