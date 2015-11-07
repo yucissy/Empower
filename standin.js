@@ -7,26 +7,28 @@ window.onload = function() {
   if (currentUser) {
     console.log('STANDIN User logged in: ' + currentUser.get("username"))
 
-    // // Look up permissions and populate HTML page
-    // var permissions = new Permissions();
-    // var query = new Parse.Query(permissions);
-    // query.equalTo("alias_name", currentUser.get("username"));
-    // query.find({
-    // success: function(results) {
-    //   alert("Successfully retrieved " + results.length + " permissions.");
-    //   // Do something with the returned Parse.Object values
-    //   for (var i = 0; i < results.length; i++) {
-    //     var object = results[i];
-    //     console.log(object.id + ' - ' + object.get('username') + '-' + object.get('gmail_allow'));
-    //   }
-    // },
-    // error: function(error) {
-    //   alert("Error: " + error.code + " " + error.message);
-    // }
-    // });
+    // Look up permissions and populate HTML page
+    var Permissions = Parse.Object.extend("Permissions");
+    var permissions = new Permissions();
 
-    // CAN I USE JQUERY FOR THIS?
-    document.getElementById('user').innerHTML += 'This is the content';
+    var query = new Parse.Query(permissions);
+    query.equalTo("alias", currentUser.get("username"));
+
+    query.find({
+    success: function(results) {
+      console.log("STANDIN Successfully retrieved " + results.length + " permissions.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) {
+        var object = results[i];
+        document.getElementById('permissions').innerHTML += ('User: ' + object.get('user') + 
+          ' Alias: ' + object.get('alias') + ' Account: ' + object.get('account') + ' Time: ' + object.get('time') + '<br>');
+        console.log(object.id + ' Username: ' + object.get('user') + ' Alias: ' + object.get('alias'));
+      }
+    },
+    error: function(error) {
+      console.log("STANDIN Error: " + error.code + " " + error.message);
+    }
+    });
 
   } else {
     console.log('STANDIN User NOT logged in')

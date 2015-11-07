@@ -15,7 +15,8 @@ window.onload = function() {
 	  },
 	  error: function(user, error) {
       console.log("SIGNIN User signing error: " + name);
-	    window.location.href="signup.html";
+      console.log("SIGNIN Error: " + error.code + ' ' + error.message);
+	    //window.location.href="signup.html";
 	  }
   });
 
