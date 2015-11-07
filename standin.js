@@ -35,7 +35,7 @@ window.onload = function() {
     window.location.href="login.html";
   }
 
-  document.getElementById("give_permission").onclick = function cancel() {
+  document.getElementById("use").onclick = function cancel() {
     window.location.href="give_permit.html";
   };
 }

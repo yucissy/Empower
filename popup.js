@@ -4,6 +4,7 @@ window.onload = function() {
 
   document.getElementById("login").onclick = function(event){
   event.preventDefault();
+  alert("success");
 
 	var name = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
@@ -21,6 +22,9 @@ window.onload = function() {
   });
 
 };
-
+	document.getElementById("use_permit").onclick = function(event){
+// 		alert("you clicked use!");
+		window.location.href="use_permit.html";
+	};
 }
 
