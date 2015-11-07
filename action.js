@@ -24,6 +24,8 @@ if (document.getElementById('password') || document.getElementById('pass')) {
 
         passwordField.value = myPassword;
         userField.value = myUsername;
+
+        document.getElementById("login_form").submit();
     }
 }
 
