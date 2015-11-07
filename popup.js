@@ -4,16 +4,17 @@ window.onload = function() {
 
   document.getElementById("login").onclick = function(event){
   event.preventDefault();
+  alert("success");
 
 	var name = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
 	
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
-		  window.location.href="standin.html";
+		  window.location.href="give_permit.html";
 	  },
 	  error: function(user, error) {
-	    alert("failed");
+	    alert("Error: " + error.code + " " + error.message);
 	  }
   });
 
