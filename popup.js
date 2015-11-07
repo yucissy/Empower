@@ -10,10 +10,11 @@ window.onload = function() {
 	
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
+      console.log("SIGNIN User signed in: " + name);
 		  window.location.href="standin.html";
 	  },
 	  error: function(user, error) {
-      console.log("SIGNIN User signing error");
+      console.log("SIGNIN User signing error: " + name);
 	    window.location.href="signup.html";
 	  }
   });
