@@ -1,11 +1,12 @@
 
+
+
 window.onload = function() {
   Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
 
-  document.getElementById("signup").onclick = function(event){
-    event.preventDefault();
-
-  	var name = document.getElementById("username").value;
+  document.getElementById("login").onclick = function(event){
+  event.preventDefault();
+	var name = document.getElementById("username").value;
   	var pass = document.getElementById("password").value;
   
   	
@@ -13,6 +14,7 @@ window.onload = function() {
 
 	user.set("username", name);
 	user.set("password", pass);
+	user.set("masters", []);
 
 	// Simple syntax to create a new subclass of Parse.Object.
 	var Permissions = Parse.Object.extend("Permissions");
@@ -27,40 +29,25 @@ window.onload = function() {
 
 		}
 	});
-    
-	user.signUp(null, {
-	  success: function(user) {
-      // Navigate to permissions page
-      window.location.href="give_permit.html";
-	  },
-	  error: function(user, error) {
-		  // Show the error message somewhere and let the user try again.
-		  alert("Error: " + error.code + " " + error.message);
-	  }
-	});
-
-};
-
-  document.getElementById("login").onclick = function(event){
-  event.preventDefault();
-  
-
-	var name = document.getElementById("username").value;
-	var pass = document.getElementById("password").value;
 	
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
+      console.log("SIGNIN User signed in: " + name);
 		  window.location.href="give_permit.html";
 		  chrome.browserAction.setPopup({
 		  	popup: 'give_permit.html'
 		  });
 	  },
 	  error: function(user, error) {
-	    alert("Error: " + error.code + " " + error.message);
+      console.log("SIGNIN User signing error: " + name);
+      console.log("SIGNIN Error: " + error.code + ' ' + error.message);
+	    //window.location.href="signup.html";
 	  }
   });
 
 };
 }
+
+
 
 

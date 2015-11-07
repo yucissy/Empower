@@ -6,24 +6,10 @@
  -->
 <html>
   <head>
-    <title>Empower Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        background-color:#2ba5fc;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-      select {
-        float:left;
-      }
-    </style>
+    <title>Empower</title>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">    <style src="style.css"></style>
 
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
@@ -31,47 +17,77 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
+    <script src="parse-1.2.13.min.js"></script>
     <script src="give_permit.js"></script>
-    <script src="parse-1.6.7.min.js"></script>
   </head>
+  
   <body>
-  <h2>Give Permissions</h2>
-  <div id="give_permission">
-    Alias' Username:<br>
-    <input type="text" id="alias">
-    <br>
-    Account Type: <br>
-      <select id="account">
-        <option value="0">Gmail</option>
-        <option value="1">Facebook</option>
-        <option value="2">Yale CAS</option>
-        <option value="3">Brown MCB</option>
-        <option value="4">JetBlue</option>
-      </select>
-    <br>
-    Account Username:<br>
-    <input type="text" id="account_username">
-    <br>
-    Account Password:<br>
-    <input type="password" id="account_password">
-    <br>
-    Time Limit<br>
-      <select id="hours">
-        <option value="0">0 hours</option>
-        <option value="1">1 hour</option>
-        <option value="2">2 hours</option>
-        <option value="3">3 hours</option>
-        <option value="4">4 hours</option>
-        <option value="5">5 hours</option>
-        <option value="6">6 hours</option>
-      </select>
+  <div class="page-wrapper"> 
+    
+    <div class="header">
+      <div class="header-content-wrapper">
+        <row>
+          <div class="header-logo col-sm-6 pull-left">
+            <img src="EmpowerClearName.png" style="width: 90px;"></img>
+          </div>
+          <div class="header-help col-sm-6 pull-right">
+            <p> help </p>
+          </div>
+        </row>
+      </div>
+    </div> <!-- close header -->
 
-    <button type="button" id="cancel">Cancel</button>
-    <button type="button" id="submit">Submit</button>
-    <button type="button" id="signout">Sign Out</button>
-</div>
+    <div class="content">
+     
+      <row>
+        <div class="carousel-wrapper">
+          <div class="integrations-carousel">
+            <row>
+              <div class="col-emp-4 integration-item">
+                <a href="facebookIntegration.html">
+                  <img class="integration-icon" src="LogoPlaceholder.png"></img>
+                  <div class="integration-text">Facebook</div>
+                </a>
+              </div>
+              <div class="col-emp-4 integration-item">
+                <img class="integration-icon" src="LogoPlaceholder.png"></img>
+                <div class="integration-text">Gmail</div>
+              </div>
+              <div class="col-emp-4 integration-item">
+                <img class="integration-icon" src="LogoPlaceholder.png"></img>
+                <div class="integration-text">Jet Blue</div>
+              </div>
+            </row>
+            <row>
+              <div class="col-emp-4 integration-item">
+                <img class="integration-icon" src="LogoPlaceholder.png"></img>
+                <div class="integration-text">Yale</div>
+              </div>
+              <div class="col-emp-4 integration-item">
+                <img class="integration-icon" src="LogoPlaceholder.png"></img>
+                <div class="integration-text">Brown</div>
+              </div>
+            </row>
+          </div>
+        </div>
+        
+        <div class="carousel-selector">
+          <p style="text-align: center; color: #fff;"> Carousel selector goes here </p>
+        </div>
+        
+      </row>
+      
+      <row>
+        <div class="btn-fw-wrapper">
+          <button type="button" id="login" class="btn btn-default btn-full-width">Done</button>
+        </div>
+      </row>
 
-
+    </div> <!-- close content -->
+  </div> <!-- close page wrapper -->
+  
+  
+  
+  
   </body>
 </html>
-

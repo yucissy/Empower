@@ -23,8 +23,5 @@ window.onload = function() {
   });
 
 };
-	// document.getElementById("use_permit").onclick = function(event){
-// 		window.location.href="use_permit.html";
-// 	};
 }
 

@@ -11,11 +11,11 @@ window.onload = function() {
 		window.location.href="login.html";
 	}
 
-	document.getElementById("cancel").onclick = function cancel() {
-		window.close();
-	};
+	// document.getElementById("cancel").onclick = function cancel() {
+	// 	window.close();
+	// };
 
-	document.getElementById("submit").onclick = function submit() {
+	document.getElementById("login").onclick = function submit() {
 		alert("clicked");
 		var alias = document.getElementById("alias").value;
 	  var account = document.getElementById("account").value;
@@ -42,11 +42,11 @@ window.onload = function() {
 		}
 		});
 	};
-	document.getElementById("signout").onclick = function submit() {
-		Parse.User.logOut();
-		chrome.browserAction.setPopup({
-		  	popup: 'login.html'
-		});
-		window.close();
-	};
+	// document.getElementById("signout").onclick = function submit() {
+	// 	Parse.User.logOut();
+	// 	chrome.browserAction.setPopup({
+	// 	  	popup: 'login.html'
+	// 	});
+	// 	window.close();
+	// };
 }
