@@ -11,7 +11,7 @@ window.onload = function() {
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
       console.log("SIGNIN User signed in: " + name);
-		  window.location.href="give_permit.html";
+		  window.location.href="setup-integrations.html";
 	  },
 	  error: function(user, error) {
       console.log("SIGNIN User signing error: " + name);
