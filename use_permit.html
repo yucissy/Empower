@@ -1,8 +1,6 @@
 <!doctype html>
 <!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
+user permissions page.
  -->
 <html>
   <head>
@@ -23,6 +21,10 @@
       #give_permission {
         display:none;
       }
+      .x  {
+      	height: 40px;
+      	width: 260px;
+      }
     </style>
 
     <!--
@@ -31,26 +33,16 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-     <script src="popup.js"></script>
+     <script src="action.js"></script>
     <script src="parse-1.6.7.min.js"></script>
   </head>
   <body>
-  <div id="login_page">
-    <h2>Login to Empower</h2>
+  <div class="possibleUsers">
+    <h2>Use Permissions</h2>
     <form>
-    User:<br>
-    <input type="text" id="username">
-    <br>
-    Password:<br>
-    <input type="password" id="password">
-    <br>
-    <button type="button" id="login">Log In</button>
-    <button type="button" id="signup">Sign Up</button>
-    <button type="button" id="use_permit">Use</button>
+    <button class="x" type="button" id="Cliff_gmail">Cliff Gmail SignIn</button>
     </form>
   </div>
-
-  
   </body>
 </html>
 

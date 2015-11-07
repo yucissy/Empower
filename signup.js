@@ -20,10 +20,6 @@ window.onload = function() {
 	
 });
 
-
-	//user.set("email", "test@gmail.com");
-	//user.set("phone", "415-392-0202");
-
 	user.signUp(null, {
 	  success: function(user) {
       // Navigate to permissions page

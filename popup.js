@@ -18,6 +18,9 @@ window.onload = function() {
   });
 
 };
-
+	document.getElementById("use_permit").onclick = function(event){
+// 		alert("you clicked use!");
+		window.location.href="use_permit.html";
+	};
 }
 
