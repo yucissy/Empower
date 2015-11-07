@@ -11,6 +11,8 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
+        background-color:#ABEF94;
+
       }
       #status {
         /* avoid an excessively wide status text */
@@ -30,6 +32,16 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    Name submitted. Do more here.
+    <h2>Give Permission</h2>
+    <form>
+    Receiver's Username:<br>
+    <input type="text" name="username">
+    <br>
+    Length of Access:<br>
+    <input type="password" name="password">
+    <br>
+    <input id="login" type="submit" value="Give Permission">
+    </form>
   </body>
 </html>
+
