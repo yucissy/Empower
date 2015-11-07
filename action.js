@@ -9,8 +9,7 @@ if (document.getElementById('password') || document.getElementById('pass') || do
         var userField = document.getElementById('username');
         var passwordField = document.getElementById('password');
 
-        passwordField.value = myPassword;
-        userField.value = myUsername;
+        setFields();
 
         var scriptNode = document.createElement('script');
         scriptNode.textContent = "javascript:prepareSubmit();";
@@ -22,16 +21,13 @@ if (document.getElementById('password') || document.getElementById('pass') || do
         var userField = document.getElementById('email');
         var passwordField = document.getElementById('pass');
 
-        passwordField.value = myPassword;
-        userField.value = myUsername;
+        setFields();
 
         document.getElementById("login_form").submit();
     }
     else if (document.getElementById('Email')) {
-        userField = document.getElementById('Email');
-        
-        userField.value = myUsername;
-        
+        userField = document.getElementById('Email');  
+        userField.value = myUsername;    
         document.getElementById('gaia_loginform').submit();     
 
     }
@@ -40,5 +36,10 @@ if (document.getElementById('password') || document.getElementById('pass') || do
         passwordField.value = myPassword;
         document.getElementById('gaia_loginform').submit();
     }
+    function setFields() {
+        passwordField.value = myPassword;
+        userField.value = myUsername;
+    }
 }
+
 
