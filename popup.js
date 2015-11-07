@@ -7,7 +7,7 @@ window.close();
 }
 
  
-    
+    Parse.initizlize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
     document.getElementById("login").onclick(function(event){
       alert("clicked");
     	event.preventDefault();
