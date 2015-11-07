@@ -29,8 +29,8 @@ window.onload = function() {
 		permissions.set("account", account);
 		permissions.set("account_username", account_username);
 		permissions.set("account_password", account_password);
-		permissions.set("time", hours);
 		permissions.set("alias", alias);
+		permissions.set("time", hours);
 		
 		permissions.save(null, {
 		success: function(permissions) {

@@ -35,7 +35,11 @@ window.onload = function() {
     window.location.href="login.html";
   }
 
-  document.getElementById("use").onclick = function cancel() {
+  document.getElementById("give").onclick = function cancel() {
     window.location.href="give_permit.html";
+  };
+
+  document.getElementById("use").onclick = function cancel() {
+    window.location.href="use_permit.html";
   };
 }
