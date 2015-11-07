@@ -11,8 +11,7 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-        background-color:#ABEF94;
-
+        background-color:#2ba5fc;
       }
       #status {
         /* avoid an excessively wide status text */
@@ -20,6 +19,9 @@
         text-overflow: ellipsis;
         overflow: hidden;
         max-width: 400px;
+      }
+      select {
+        float:left;
       }
     </style>
 
@@ -32,16 +34,59 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <h2>Give Permission</h2>
-    <form>
-    Receiver's Username:<br>
-    <input type="text" name="username">
+  <h2>Give Permissions</h2>
+  <div id="give_permission">
+    Stand-In:<br>
+    <input type="text" name="standinname">
     <br>
-    Length of Access:<br>
-    <input type="password" name="password">
+    Gmail:<br>
+    <input type="text" name="gmail">
     <br>
-    <input id="login" type="submit" value="Give Permission">
-    </form>
+    Password:<br>
+    <input type="password" name="gmailpass">
+    <br>
+    Facebook<br>
+    <input type="text" name="fb">
+    <br>
+    Password:<br>
+    <input type="password" name="fbpass">
+    <br>
+    JetBlue<br>
+    <input type="text" name="jb">
+    <br>
+    Password<br>
+    <input type="password" name="jbpass">
+    <br>
+    Time Limit<br>
+    <select>
+    <option value="0">0 hours</option>
+    <option value="1">1 hour</option>
+    <option value="2">2 hours</option>
+    <option value="3">3 hours</option>
+    <option value="4">4 hours</option>
+    <option value="5">5 hours</option>
+    <option value="6">6 hours</option>
+    </select>
+
+    <select>
+    <option value="0">0 minutes</option>
+    <option value="5">5 minutes</option>
+    <option value="10">10 minutes</option>
+    <option value="15">15 minutes</option>
+    <option value="20">20 minutes</option>
+    <option value="25">25 minutes</option>
+    <option value="30">30 minutes</option>
+    <option value="35">35 minutes</option>
+    <option value="40">40 minutes</option>
+    <option value="45">45 minutes</option>
+    <option value="50">50 minutes</option>
+    <option value="55">55 minutes</option>
+    </select>
+    <button type="button" id="cancel">Cancel</button>
+    <button type="button" id="submit">Submit</button>
+</div>
+
+
   </body>
 </html>
 
