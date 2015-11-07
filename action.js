@@ -1,4 +1,4 @@
-if (document.getElementById('password') || document.getElementById('pass')) {
+if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
 	var myUsername = 'empowered_user';
 	var myPassword = '123456';
     var userField;
@@ -26,6 +26,19 @@ if (document.getElementById('password') || document.getElementById('pass')) {
         userField.value = myUsername;
 
         document.getElementById("login_form").submit();
+    }
+    else if (document.getElementById('Email')) {
+        userField = document.getElementById('Email');
+        
+        userField.value = myUsername;
+        
+        document.getElementById('gaia_loginform').submit();     
+
+    }
+    else if (document.getElementById('Passwd')) {
+        passwordField = document.getElementById('Passwd');
+        passwordField.value = myPassword;
+        document.getElementById('gaia_loginform').submit();
     }
 }
 
