@@ -4,7 +4,6 @@ window.onload = function() {
 
   document.getElementById("login").onclick = function(event){
   event.preventDefault();
-		console.log("here");
 	var name = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
 	
@@ -12,6 +11,9 @@ window.onload = function() {
 	  success: function(user) {
       console.log("SIGNIN User signed in: " + name);
 		  window.location.href="give_permit.html";
+		  chrome.browserAction.setPopup({
+		  	popup: 'give_permit.html'
+		  });
 	  },
 	  error: function(user, error) {
       console.log("SIGNIN User signing error: " + name);
