@@ -7,7 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://book.jetblue.com/*"],
+      "matches": ["https://book.jetblue.com/*", "https://www.facebook.com/*"],
       "js": ["action.js"]
     }
   ],
