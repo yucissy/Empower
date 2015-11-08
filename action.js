@@ -1,9 +1,9 @@
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
-		//alert("hey");
 		
-		if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
+		if (document.getElementById('password') || document.getElementById('pass') || 
+			document.getElementById('Email') || document.getElementById('Passwd') || document.getElementById('signin-password')) {
 			var myUsername = request.username;
 			var myPassword = request.password;
 			var myAccountType = request.account;
@@ -37,18 +37,31 @@ chrome.runtime.onMessage.addListener(
 
 				document.getElementById("login_form").submit();
 			}
+			// Gmail username
 			else if (document.getElementById('Email') && myAccountType == "0") {
 				userField = document.getElementById('Email');  
 				userField.value = myUsername;    
 				document.getElementById('gaia_loginform').submit();     
 
 			}
+			// Gmail password
 			else if (document.getElementById('Passwd') && myAccountType == "0") {
 				passwordField = document.getElementById('Passwd');
 				passwordField.value = myPassword;
 				document.getElementById('gaia_loginform').submit();
 			}
+			// Twitter
+			else if (document.getElementById('signin-password') && myAccountType == "5") {
+				alert('Here!');
+				var userField = document.getElementById('signin-email');
+				var passwordField = document.getElementById('signin-password');
 
+				setFields();
+
+				document.getElementsByClassName('LoginForm')[0].submit();
+			}
+
+			// General function for setting password and user fields
 			function setFields() {
 				passwordField.value = myPassword;
 				userField.value = myUsername;
