@@ -1,9 +1,10 @@
 
 chrome.runtime.onMessage.addListener(
-function(request, sender, sendResponse) {
-			if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
-			var myUsername = 'empowered_user';
-			var myPassword = '123456';
+	function(request, sender, sendResponse) {
+		Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
+		if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
+			var myUsername = 'empoweredtask1@gmail.com';
+			var myPassword = 'Yhack2015';
 
 			// JetBlue, Brown SSO, Yale CAS login
 			if (document.getElementById('password')) {
@@ -50,12 +51,10 @@ function(request, sender, sendResponse) {
 				userField.value = myUsername;
 			}
 		}
+		
 		return true;
-
-
-});
-//   Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
-
+	}
+);
 	
 
 
