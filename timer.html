@@ -2,20 +2,63 @@
 <html lang="en">
 
 <head>
+<title>Timer</title>
+<link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style-2.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style src="style-2.css"></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="timer.js"></script>
 
 <style>
 body {min-width: 240px; font-size:3em;}
-#display, #settings {margin-top: 4px;}
+#display, #settings {margin-top: 4px;line-height:40px;}
 #modify {margin-bottom: 4px;}
 #resume, #pause, #restart {display:none;}
 </style>
     
 </head>
 
-
 <body>
-<div class="container-fluid">
+
+    
+</div>
+
+<div class="page-wrapper"> 
+    
+    <div class="header">
+      <div class="header-content-wrapper">
+        <div class="row">
+          <div class="header-logo col-emp-6 pull-left">
+            <img src="Empower-logo-dark-blue.png" style="width: 80px;">
+          </div>
+          <div class="header-help col-emp-6 pull-right">
+            <p> help </p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- close header -->
+
+    <div class="content">
+     
+      <div class="row twenty-vpadding" style="padding: 30px 0px; border-top: 1px solid rgba(0,68,105,0.3);
+">
+            <div id="display">
+     <!--    <div class="span12"> -->
+           <!--  <div class="progress progress-striped active progress-success progress-large"> -->
+                <div id="bar" style="width: 100%; text-align:center;"></div>
+         <!--    </div> -->
+       <!--  </div> -->
+            </div>
+      <!--   <h1 class="timer_visual" style="text-align:center;">
+            
+
+        </h1> -->
+        </div>
+
+
+
+<!-- <div class="container-fluid">
     <div id="display" class="row-fluid">
         <div class="span12">
             <div class="progress progress-striped active progress-success progress-large">
@@ -23,23 +66,27 @@ body {min-width: 240px; font-size:3em;}
             </div>
         </div>
     </div>
-    
-    <div id="modify" class="row-fluid">
-        <div class="span12">
-            <button id="cancel">Cancel</button>
-            <button id="back">Back</button>
-            <button id="resume" class="offset1 btn btn-success"><i class="icon-play icon-white"></i></button>
+
+      </div>     
+      -->
+     
+      <div id="modify" class="row ten-vpadding">
+          <button class="btn btn-half-solid" type="button" id="back" style="margin-right: 0px; margin-left: 0px;">Back</button>
+
+          <button class="btn btn-half-outline" type="button" id="cancel" style="margin-right: 0px;">Cancel</button>
+       
+
+                    <button id="resume" class="offset1 btn btn-success"><i class="icon-play icon-white"></i></button>
             <button id="pause" class="offset1 btn btn-warning"><i class="icon-pause icon-white"></i></button>
             <button id="restart" class="offset1 btn"><i class="icon-repeat"></i></button>
-        </div>
-    </div>
-    
-    <div id="settings" class="row-fluid">
-        <div class="span12">
-            
-        </div>
-    </div>
-    
-</div>
+      </div>
+     
+     
+    </div> <!-- close content -->
+  </div> <!-- close page wrapper -->
+  
+  
+  
+  
 </body>
 </html>
