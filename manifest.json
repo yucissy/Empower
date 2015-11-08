@@ -9,7 +9,7 @@
           		"128": "icon128.png" },
   "content_scripts": [
     {
-      "matches": ["https://book.jetblue.com/*", "https://www.facebook.com/*", 
+      "matches": ["https://book.jetblue.com/*", "https://www.facebook.com/*", "*://facebook.com/*", 
       "https://secure.its.yale.edu/cas/login*", "https://sso.brown.edu/idp/Authn/MCB", 
       "https://accounts.google.com/*"],
       "js": ["action.js"]
