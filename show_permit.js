@@ -41,14 +41,30 @@ window.onload = function() {
       for (var i = 0; i < results.length; i++) {
         var object = results[i];
 
+        var icon = "icon48.png";
+        var account = object.get('account');
+        if (account == "0") {
+          icon = "gmail-icon.png";
+        } else if (account == "1") {
+          icon = "facebook-icon.png";
+        } else if (account == "2") {
+          icon = "yale-icon.png";
+        } else if (account == "3") {
+          icon = "brown-icon.png";
+        } else if (account == "4") {
+          icon = "jetblue-icon.png";
+        } else if (account == "5") {
+          icon = "twitter-icon.png";
+        }
+
         // Ineject div into button
         var div = document.createElement('div');
         div.className = 'row permit-received-' + (i + 1) + ' five-vpadding';
         div.innerHTML = ('<div class="permit-icon-wrapper col-emp-1">' +
-                    '<img class="permit-icon" src="facebook-icon.png"></div>' +
+                    '<img class="permit-icon" src=' + icon + '></div>' +
                   '<div class="col-emp-1"></div>' +
                   '<div class="permit-data col-emp-8"><p><strong>' + object.get('user') + '</strong> for ' +
-                    object.get('time') + ' hr on his ' + object.get('account') + '.</p></div>' +
+                    object.get('time') + ' hr.</p></div>' +
                   '<div class="col-emp-2" style="padding-top: 2px; text-align: left;">' +
                     '<p style="font-size: 14px; color: #F2F2F2; line-height: 22px; margin-bottom: 0px;"><strong>ACCESS</strong></p>');
        
@@ -104,15 +120,32 @@ window.onload = function() {
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
 
+          var icon = "icon48.png";
+          var account = object.get('account');
+          if (account == "0") {
+            icon = "gmail-icon.png";
+          } else if (account == "1") {
+            icon = "facebook-icon.png";
+          } else if (account == "2") {
+            icon = "yale-icon.png";
+          } else if (account == "3") {
+            icon = "brown-icon.png";
+          } else if (account == "4") {
+            icon = "jetblue-icon.png";
+          } else if (account == "5") {
+            icon = "twitter-icon.png";
+          }
+
           var div = document.createElement('div');
           div.className = 'row permit-sent-' + (i + 1) + ' five-vpadding';
           div.innerHTML = ('<div class="permit-icon-wrapper col-emp-1">' +
-                      '<img class="permit-icon" src="facebook-icon.png"></div>' +
+                      '<img class="permit-icon" src='+ icon +'></div>' +
                       '<div class="col-emp-1"></div>' + 
-                      '<div class="permit-data col-emp-9"><p><strong>' + object.get('alias') + '</strong> for ' +
-                      object.get('time') + ' hr on your ' + object.get('account') + ' account.</p></div>' +
-                      '<i class="fa fa-times fa-2x col-emp-1 permit-cancel" style="color: #DEDEDE;"></i>');
-    
+                      '<div class="permit-data col-emp-8"><p><strong>' + object.get('alias') + '</strong> for ' +
+                      object.get('time') + ' hr.</p></div>' +
+                      '<div class="col-emp-2" style="padding-top: 2px; text-align: left;">' +
+                      '<p style="font-size: 14px; color: #F2F2F2; line-height: 22px; margin-bottom: 0px;"><strong>CANCEL</strong></p>');
+           
           var button = document.createElement("button");
     		  button.appendChild(div);
           button.id = object.id;
