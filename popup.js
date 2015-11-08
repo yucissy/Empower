@@ -10,9 +10,9 @@ window.onload = function() {
 	Parse.User.logIn(name, pass, {
 	  success: function(user) {
       console.log("SIGNIN User signed in: " + name);
-		  window.location.href="give_permit.html";
+		  window.location.href="show_permit.html";
 		  chrome.browserAction.setPopup({
-		  	popup: 'give_permit.html'
+		  	popup: 'show_permit.html'
 		  });
 	  },
 	  error: function(user, error) {
