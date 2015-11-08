@@ -5,7 +5,6 @@
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <style src="style.css"></style>
 
     <script src="parse-1.6.7.min.js"></script>
     <script src="give_permit.js"></script>
@@ -15,30 +14,29 @@
   <div class="page-wrapper"> 
     
     <div class="header">
-      <div class="header-content-wrapper">
-        <row>
+      <div class="header-content-wrapper" style="border-bottom: 1px solid rgba(0,68,105,0.3);">
+        <div class="row">
           <div class="header-logo col-emp-6 pull-left">
-            <img src="EmpowerClearName.png" style="width: 90px;"></img>
+            <img src="Empower-logo-dark-blue.png" style="width: 80px;"></img>
           </div>
           <div class="header-help col-emp-6 pull-right">
             <p> help </p>
-            <p> add services </p>
           </div>
-        </row>
+        </div>
       </div>
     </div> <!-- close header -->
 
     <div class="content">
 
-       <row class="row-wrapper">
-         <h3>Assign Permissions</h3>
-       </row>
-     
-       <row class="row-wrapper">
-           <row>
+       <div class="row ten-vpadding">
+         <p>Assign Permissions</p>
+       </div>
+
+       <div class="row">
+           <div>
                 <div class="" style="padding-bottom: 50px;">
-                  <label for="sel1" style="color: #fff;">For which account?</label>
                   <select class="form-control" id="account">
+                    <option value="" disabled selected hidden>Select an account</option>
                     <option value="0">Gmail</option>
                     <option value="1">Facebook</option>
                     <option value="2">Yale CAS</option>
@@ -47,37 +45,44 @@
                     <option value="5">Twitter</option>
                   </select>
                 </div>
-                <div class="" style="padding-bottom: 25px;">
-                  <label for="sel2" style="color: #fff;">What is your account username?</label>
-                  <input type="text" class="form-control" id="account_username" placeholder="example@gmail.com">
+                <div class="" style="padding-bottom: 15px;">
+                  <input type="text" class="form-control" id="account_username" placeholder="account email">
                 </div>
                 <div class="" style="padding-bottom: 25px;">
-                  <label for="sel3" style="color: #fff;">What is your account password?</label>
-                  <input type="password" class="form-control" id="account_password" placeholder="********">
+                  <input type="password" class="form-control" id="account_password" placeholder="account password">
                 </div>
-                <div class="" style="padding-bottom: 25px;">
-                  <label for="sel4" style="color: #fff;">To who?</label>
-                  <input type="text" class="form-control" id="alias" placeholder="Alias Username">
+                <div class="row">
+                  <div class="col-emp-6">
+                    <p>To who?</p>
+                    <input type="text" class="form-control col-emp-6" id="alias" placeholder="username" style="padding-left: 10px; margin-right: 5px; margin-left: 0px; width: 125px;">
+                  </div>
+                  <div class="col-emp-6">
+                    <p style="padding-left: 10px;">For how long?</p>
+                    <select class="form-control col-emp-6" id="hours" style="margin-right: 0px; margin-left: 5px;  width: 125px;">
+                      <option value="0">0 hours</option>
+                      <option value="1">1 hour</option>
+                      <option value="2">2 hours</option>
+                      <option value="3">3 hours</option>
+                      <option value="4">4 hours</option>
+                      <option value="5">5 hours</option>
+                      <option value="6">6 hours</option>
+                    </select>
+                  </div>  
                 </div>
-                <div class="" style="padding-bottom: 50px;">
-                  <label for="sel5" style="color: #fff;">For how long?</label>
-                  <select class="form-control" id="hours">
-                    <option value="0">0 hours</option>
-                    <option value="1">1 hour</option>
-                    <option value="2">2 hours</option>
-                    <option value="3">3 hours</option>
-                    <option value="4">4 hours</option>
-                    <option value="5">5 hours</option>
-                    <option value="6">6 hours</option>
-                  </select>
-                </div>
-            </row>
+              </div>
+            </div>
             
-            <row>
-              <button class="btn" type="button" id="submit" style="margin-top: 10px; background-color: #DB357A; border-color: #DB357A; color: #fff;">Submit</button>
-              <button class="btn" type="button" id="cancel" style="margin-top: 10px; margin-left: 10px; background-color: transparent; border-color: #fff; color: #fff;">Cancel</button>
-            </row>
-       </row>
+            <div class="row twenty-vpadding">
+              <div class="col-emp-6">
+                  <button class="btn btn-half-solid" type="button" id="submit" style="margin-right: 5px; margin-left: 0px; width: 125px;">Submit</button>
+              </div>
+              
+              <div class="col-emp-6">
+                  <button class="btn btn-half-outline" type="button" id="cancel" style="margin-right: 0px; margin-left: 5px;  width: 125px;">Cancel</button>
+              </div>
+           </div>
+           
+       </div>
 
     </div> <!-- close content -->
   </div> <!-- close page wrapper -->

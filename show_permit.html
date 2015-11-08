@@ -5,6 +5,8 @@
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <style src="style.css"></style>
     <script src="parse-1.6.7.min.js"></script>
     <script src="show_permit.js"></script>
@@ -17,36 +19,46 @@
 
     <div class="header">
       <div class="header-content-wrapper">
-        <row>
+        <div class="row">
           <div class="header-logo col-emp-6 pull-left">
-            <img src="EmpowerClearName.png" style="width: 90px;"></img>
+            <img src="Empower-logo-dark-blue.png" style="width: 80px;"></img>
           </div>
           <div class="header-help col-emp-6 pull-right">
             <p> help </p>
-            <p> add services </p>
           </div>
-        </row>
+        </div>
       </div>
     </div> <!-- close header -->
 
   <div class="content">
-    <h2>Your Received Permissions</h2>
+      <div class="permits-received-container" style="margin-top: 20px;">
+        <div class="row ten-vpadding">
+          <p>Permissions received from</p>
+        </div>
+        <div class="row">
+          <div class="permits-received" id="received_permit">
+            
+          </div>
+        </div>
+      </div> <!-- close permits received container -->
 
-    
-    <div id="received_permit">
-<!--     <button type="button" id="received_permit"  class="btn btn-default btn-full-width" style="color: white; width:340px; margin:30px 10px; background-color: #DB357A; border-color: #DB357A; padding: 10px 12px;"></button> -->
-      <!-- Injected from Javascript File -->  
-    </div>
 
-    <h2>Your Sent Permissions</h2>
+    <div class="permits-sent-container">
+        <div class="row ten-vpadding">
+          <p>Permissions sent to</p>
+        </div>
+        <div class="row">
+          <div class="permits-sent" id="sent_permit">
+          
 
-    <div id="sent_permit">
-      <!-- Injected from Javascript File -->  
-    </div>
-    <br>
+          </div>
+        </div>
+      </div> <!-- close permits sent container -->
 
-    <button type="button" id="give">Give Permissions</button>
-    <button type="button" id="logout">Log Out</button>
+     <div class="row ten-vpadding">
+          <button class="btn btn-half-solid" type="button" id="give" style="margin-right: 0px; margin-left: 0px;">New Permission</button>
+          <button class="btn btn-half-outline" type="button" id="logout" style="margin-right: 0px;">Log Out</button>
+      </div>
   
   </div> <!-- close content -->
   </div> <!-- close page wrapper -->
