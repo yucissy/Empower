@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="timer.js"></script>
+
+<style>
+body {min-width: 240px; font-size:3em;}
+#display, #settings {margin-top: 4px;}
+#modify {margin-bottom: 4px;}
+#resume, #pause, #restart {display:none;}
+</style>
+    
+</head>
+
+
+<body>
+<div class="container-fluid">
+    <div id="display" class="row-fluid">
+        <div class="span12">
+            <div class="progress progress-striped active progress-success progress-large">
+                <div class="bar" id="bar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modify" class="row-fluid">
+        <div class="span12">
+            <button id="cancel">Cancel</button>
+            <button id="back">Back</button>
+            <button id="resume" class="offset1 btn btn-success"><i class="icon-play icon-white"></i></button>
+            <button id="pause" class="offset1 btn btn-warning"><i class="icon-pause icon-white"></i></button>
+            <button id="restart" class="offset1 btn"><i class="icon-repeat"></i></button>
+        </div>
+    </div>
+    
+    <div id="settings" class="row-fluid">
+        <div class="span12">
+            
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

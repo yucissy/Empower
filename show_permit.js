@@ -1,3 +1,19 @@
+var bgpage = chrome.extension.getBackgroundPage();
+function setTimer(num)
+{
+  
+  // SET background timer for selected number
+  // HIDE settings, DISPLAY countdown
+  
+  // set timer, hide settings, display reset button
+
+    bgpage.setAlarm(num * 600000);
+    hide("settings");
+    show("modify");
+      show("display");
+    refreshDisplay();
+}
+
 window.onload = function() {
 
   Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
@@ -45,6 +61,11 @@ window.onload = function() {
               chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
                 chrome.tabs.sendMessage(tabs[0].id, {username, password, account}, function(response) {});  
               });
+              window.location.href="timer.html";
+              chrome.browserAction.setPopup({
+                  popup: 'timer.html'
+              });
+              setTimer(permission.get("time"));
             },
             error: function(object, error) {
               alert("Error");
@@ -127,8 +148,5 @@ window.onload = function() {
     window.location.href="login.html";
   };
 
-  function autoSignIn(id) {
-    alert(id);
-  };
 
 }
