@@ -5,7 +5,7 @@ window.onload = function() {
   // Check user login
   var currentUser = Parse.User.current();
   if (currentUser) {
-    console.log('STANDIN User logged in: ' + currentUser.get("username"))
+    console.log('SHOW_PERMIT User logged in: ' + currentUser.get("username"))
 
     // Look up permissions and populate HTML page
     var Permissions = Parse.Object.extend("Permissions");
@@ -16,7 +16,7 @@ window.onload = function() {
 
     received_query.find({
     success: function(results) {
-      console.log("STANDIN Successfully retrieved " + results.length + " permissions.");
+      console.log("SHOW_PERMIT Successfully retrieved " + results.length + " received permissions.");
       // Do something with the returned Parse.Object values
       for (var i = 0; i < results.length; i++) {
         var object = results[i];
@@ -26,7 +26,7 @@ window.onload = function() {
       }
     },
     error: function(error) {
-      console.log("STANDIN Received Permit Error: " + error.code + " " + error.message);
+      console.log("SHOW_PERMIT Received Permit Error: " + error.code + " " + error.message);
     }
     });
 
@@ -36,7 +36,7 @@ window.onload = function() {
 
     sent_query.find({
     success: function(results) {
-      console.log("STANDIN Successfully retrieved " + results.length + " permissions.");
+      console.log("SHOW_PERMIT Successfully retrieved " + results.length + " sent permissions.");
       // Do something with the returned Parse.Object values
       for (var i = 0; i < results.length; i++) {
         var object = results[i];
@@ -46,12 +46,12 @@ window.onload = function() {
       }
     },
     error: function(error) {
-      console.log("STANDIN Sent Permit Error: " + error.code + " " + error.message);
+      console.log("SHOW_PERMIT Sent Permit Error: " + error.code + " " + error.message);
     }
     });
 
   } else {
-    console.log('STANDIN User NOT logged in')
+    console.log('SHOW_PERMIT User NOT logged in')
     window.location.href="login.html";
   }
 
@@ -63,9 +63,8 @@ window.onload = function() {
     window.location.href="use_permit.html";
   };
 
-  document.getElementById("signout").onclick = function submit() {
+  document.getElementById("logout").onclick = function submit() {
     Parse.User.logOut();
     window.location.href="login.html";
-    window.close();
   };
 }
