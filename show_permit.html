@@ -1,40 +1,54 @@
 <!doctype html>
 <html>
   <head>
-    <title>Empower Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        background-color:#2ba5fc;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
+    <title>Empower</title>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style src="style.css"></style>
 
-    <script src="show_permit.js"></script>
     <script src="parse-1.6.7.min.js"></script>
+    <script src="show_permit.js"></script>
   </head>
-  <body>
-  <div id="standin_page">
-    <h2>Your Alias Permissions</h2>
 
-    <!-- THIS SECTION NEEDS TO BE REPEATED FOR EVERY EXISTING PERMISSION -->
-    <div id="permissions">
-      Your Current Alias Permissions<br>
+  <body>
+
+  <div class="page-wrapper"> 
+
+    <div class="header">
+      <div class="header-content-wrapper">
+        <row>
+          <div class="header-logo col-emp-6 pull-left">
+            <img src="EmpowerClearName.png" style="width: 90px;"></img>
+          </div>
+          <div class="header-help col-emp-6 pull-right">
+            <p> help </p>
+            <p> add services </p>
+          </div>
+        </row>
+      </div>
+    </div> <!-- close header -->
+
+  <div class="content">
+    <h2>Your Received Permissions</h2>
+
+    
+    <div id="received_permit">
+      <!-- Injected from Javascript File -->  
     </div>
 
-    <!-- END SECTION -->
+    <h2>Your Sent Permissions</h2>
+
+    <div id="sent_permit">
+      <!-- Injected from Javascript File -->  
+    </div>
+
     <button type="button" id="give">Give Permissions</button>
     <button type="button" id="use">Use Permissions</button>
-  </div>
-
+    <button type="button" id="signout">Sign Out</button>
   
+  </div> <!-- close content -->
+  </div> <!-- close page wrapper -->
   </body>
 </html>
 
