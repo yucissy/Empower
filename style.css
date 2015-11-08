@@ -130,6 +130,17 @@ select {
   padding-top: 4px;
 }
 
+.permit-data p {
+  text-align: left;
+  margin: 0px;
+}
+
+.permit-cancel {
+  padding-top; 5px;
+  color: #DEDEDE;
+}
+
+
 .content {
   height: 320px;
 }
@@ -226,6 +237,40 @@ select {
     line-height: 1.5;
     border: 0px solid #ccc;
 } 
+
+.btn-permit-selector {
+  margin-left: -20px;
+  width: 300px;
+  display: inline-block;
+  padding: 0px 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: #F2F2F2;
+}
+
+.btn-permit-selector:hover,
+.btn-permit-selector:focus, 
+.btn-permit-selector.focus {
+  background-color: #DEDEDE;
+}
+
+
+
 
 .permits-sent-container,.permits-received-container {
   border-top: 1px solid rgba(0,68,105,0.3);

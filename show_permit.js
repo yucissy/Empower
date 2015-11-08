@@ -40,24 +40,23 @@ window.onload = function() {
       // Iterate through each returned object and create buttons
       for (var i = 0; i < results.length; i++) {
         var object = results[i];
-        var x = (' Account: ' + object.get('account') + ' User: ' + object.get('user') + 
-        ' Time: ' + object.get('time'));
 
-        // var div = document.createElement('div');
-        // div.className = 'row permit-received-' + (i + 1) + ' five-vpadding';
-        // div.innerHTML = ('<div class="permit-icon-wrapper col-emp-2">' +
-        //             '<img class="permit-icon" src="facebook-icon.png">' +
-        //             '</div>' +
-        //             '<div class="permit-data col-emp-9"><p><strong>' + object.get('user') + '</strong> for ' +
-        //             object.get('time') + ' hr.</p></div><i class="fa fa-times fa-2x col-emp-1 permit-cancel" style="color: #DEDEDE;"></i>');
-
-        // document.getElementById('received_permit').appendChild(div);
+        // Ineject div into button
+        var div = document.createElement('div');
+        div.className = 'row permit-received-' + (i + 1) + ' five-vpadding';
+        div.innerHTML = ('<div class="permit-icon-wrapper col-emp-1">' +
+                    '<img class="permit-icon" src="facebook-icon.png"></div>' +
+                  '<div class="col-emp-1"></div>' +
+                  '<div class="permit-data col-emp-8"><p><strong>' + object.get('user') + '</strong> for ' +
+                    object.get('time') + ' hr on his ' + object.get('account') + '.</p></div>' +
+                  '<div class="col-emp-2" style="padding-top: 2px; text-align: left;">' +
+                    '<p style="font-size: 14px; color: #F2F2F2; line-height: 22px; margin-bottom: 0px;"><strong>ACCESS</strong></p>');
        
+        // Inject button into page
     		var button = document.createElement("button");
-    		var t = document.createTextNode(x);
-    		button.appendChild(t);
+    		button.appendChild(div);
         button.id = object.id;
-        button.class = "fa fa-times fa-2x col-emp-1 permit-cancel";
+        button.className = "btn btn-permit-selector";
 
         button.onclick = function() {
           var account;
@@ -104,14 +103,20 @@ window.onload = function() {
         // Do something with the returned Parse.Object values
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
-          y = ('User: ' + object.get('user') + ' Alias: ' + object.get('alias') + 
-            ' Account: ' + object.get('account') + ' Time: ' + object.get('time'));
-        
+
+          var div = document.createElement('div');
+          div.className = 'row permit-sent-' + (i + 1) + ' five-vpadding';
+          div.innerHTML = ('<div class="permit-icon-wrapper col-emp-1">' +
+                      '<img class="permit-icon" src="facebook-icon.png"></div>' +
+                      '<div class="col-emp-1"></div>' + 
+                      '<div class="permit-data col-emp-9"><p><strong>' + object.get('alias') + '</strong> for ' +
+                      object.get('time') + ' hr on your ' + object.get('account') + ' account.</p></div>' +
+                      '<i class="fa fa-times fa-2x col-emp-1 permit-cancel" style="color: #DEDEDE;"></i>');
+    
           var button = document.createElement("button");
-    		  var t = document.createTextNode(y);
-    		  button.appendChild(t);
+    		  button.appendChild(div);
           button.id = object.id;
-          button.class = "button";
+          button.className = "btn btn-permit-selector";
 
           button.onclick = function() {
             var permission = new(Permissions);
