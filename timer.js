@@ -6,7 +6,7 @@ window.onload = function() {
 document.getElementById("cancel").onclick = function(event){
 
               chrome.browserAction.setPopup({
-                  popup: 'login.html'
+                  popup: 'show_permit.html'
               });
               window.close();
               bgpage.turnOff();
