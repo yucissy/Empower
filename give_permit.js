@@ -11,9 +11,9 @@ window.onload = function() {
 		window.location.href="login.html";
 	}
 
-	// document.getElementById("cancel").onclick = function cancel() {
-	// 	window.close();
-	// };
+	document.getElementById("cancel").onclick = function cancel() {
+		window.close();
+	};
 
 	document.getElementById("login").onclick = function submit() {
 		alert("clicked");
@@ -35,18 +35,20 @@ window.onload = function() {
 		
 		permissions.save(null, {
 		success: function(permissions) {
-			console.log('GIVE_PERMIT Permission save successful')
+			console.log('GIVE_PERMIT Permission save successful');
+			window.location.href="show_permit.html";
 		},
 		error: function(permissions, error) {
-			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message)
+			console.log('GIVE_PERMIT Permission save FAILED. Error: ' + error.code + " " + error.message);
 		}
 		});
 	};
-	// document.getElementById("signout").onclick = function submit() {
-	// 	Parse.User.logOut();
-	// 	chrome.browserAction.setPopup({
-	// 	  	popup: 'login.html'
-	// 	});
-	// 	window.close();
-	// };
+
+	document.getElementById("signout").onclick = function submit() {
+		Parse.User.logOut();
+		chrome.browserAction.setPopup({
+		  	popup: 'login.html'
+		});
+		window.close();
+	};
 }
