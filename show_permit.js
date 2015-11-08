@@ -42,12 +42,22 @@ window.onload = function() {
         var object = results[i];
         var x = (' Account: ' + object.get('account') + ' User: ' + object.get('user') + 
         ' Time: ' + object.get('time'));
+
+        // var div = document.createElement('div');
+        // div.className = 'row permit-received-' + (i + 1) + ' five-vpadding';
+        // div.innerHTML = ('<div class="permit-icon-wrapper col-emp-2">' +
+        //             '<img class="permit-icon" src="facebook-icon.png">' +
+        //             '</div>' +
+        //             '<div class="permit-data col-emp-9"><p><strong>' + object.get('user') + '</strong> for ' +
+        //             object.get('time') + ' hr.</p></div><i class="fa fa-times fa-2x col-emp-1 permit-cancel" style="color: #DEDEDE;"></i>');
+
+        // document.getElementById('received_permit').appendChild(div);
        
     		var button = document.createElement("button");
     		var t = document.createTextNode(x);
     		button.appendChild(t);
         button.id = object.id;
-        button.class = "button";
+        button.class = "fa fa-times fa-2x col-emp-1 permit-cancel";
 
         button.onclick = function() {
           var account;
