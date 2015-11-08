@@ -23,6 +23,26 @@ window.onload = function() {
         document.getElementById('received_permit').innerHTML += ('User: ' + object.get('user') + 
           ' Alias: ' + object.get('alias') + ' Account: ' + object.get('account') + ' Time: ' + object.get('time') + '<br>');
         console.log(object.id + ' Username: ' + object.get('user') + ' Alias: ' + object.get('alias'));
+        
+        var button = document.createElement("button");
+        var t = document.createTextNode("Go!");
+        button.appendChild(t);
+        document.getElementById('received_permit').appendChild(button);
+        // document.getElementById('received_permit').innerHTML += ("<button id="+object.id+">Go!</button>");
+        // document.getElementById(object.id).style.color="red";
+        // document.getElementById(object.id).onclick = function(event) {
+        //   console.log("hey");
+        // };
+        //goSignIn(object, object.get('account'));
+
+     //   document.getElementById(object.id).onclick = function(event){
+     //   console.log("hey");
+     //   chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+     //       chrome.tabs.sendMessage(tabs[0].id, {action: "login", type: account }, function(response) {
+     //     });  
+     //   });
+   
+     // };
       }
     },
     error: function(error) {
@@ -67,5 +87,18 @@ window.onload = function() {
     Parse.User.logOut();
     window.location.href="login.html";
     window.close();
+  };
+
+
+  function goSignIn(object, account) {
+    console.log("account: " + account + " username: " + object.get('account_username') + "password: " + object.get('account_password'));
+    document.getElementById(account).onclick = function(event){
+      console.log("hey");
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+          chrome.tabs.sendMessage(tabs[0].id, {action: "login", type: account }, function(response) {
+        });  
+      });
+   
+    };
   };
 }
