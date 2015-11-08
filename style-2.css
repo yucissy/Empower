@@ -1,0 +1,324 @@
+body {
+    font-family: "Open Sans", Calibri, sans-serif;
+    font-size: 100%;
+    background-color:#F2F2F2;
+    height: 400px;
+    width: 300px;
+  }
+      
+#status {
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 400px;
+  }
+      
+select {
+    float:left;
+  }
+  
+  p,h1,h2,h3,h4 {
+    color: #004469;
+  }
+  
+  p {
+    font-size: 12px;
+  }
+
+/* ========================  LOGIN PAGE  ======================== */
+/* ========================  LOGIN PAGE  ======================== */
+/* ========================  LOGIN PAGE  ======================== */
+
+
+.login-page {
+    padding: 20px;
+}
+
+.login-page-header {
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+    padding-bottom: 62px;
+}
+
+.login-page-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+  }
+
+.input-page-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 200px;
+}
+
+.input-login-page {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 0px solid #ccc;
+} 
+
+.form-control {
+    padding: 6px 12px;
+    border: 0px;
+}
+
+
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+/* ========================  INTEGRATION SETUP PAGE  ======================== */
+
+.page-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.header {
+  height: 60px;
+}
+
+.five-vpadding {
+  padding-top: 5px;
+  padding-bottom: 5px;  
+}
+.ten-vpadding {
+  padding-top: 10px;
+  padding-top: 10px;
+}
+
+.twenty-vpadding {
+  padding-top: 20px;
+  padding-top: 20px;}
+
+.header-content-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+}
+
+.header-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.header-help {
+  height: 40px;
+  width: 40px;
+  
+}
+
+.permit-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+}
+
+.permit-data {
+  padding-top: 4px;
+}
+
+.permit-data p {
+  text-align: left;
+  margin: 0px;
+}
+
+.permit-cancel {
+  padding-top; 5px;
+  color: #DEDEDE;
+}
+
+
+.content {
+  height: 320px;
+}
+
+.carousel-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+}
+
+.integrations-carousel {
+  height: 200px;
+}
+
+.carousel-selector {
+  height: 20px;
+}
+
+.integration-item {
+  padding-top: 15px;
+}
+
+.integration-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 40px;
+}
+
+.integration-text {
+  padding-top: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-fw-wrapper {
+  padding-top: 20px;
+  padding-bottom 20px;
+}
+
+.btn-full-solid {
+  padding: 12px 10px;
+  width: 240px;
+  background-color: #4CCF40; 
+  border-color: #4CCF40; 
+  color: #fff;
+  margin: 0px 10px;
+}
+
+.btn-half-solid {
+  width: 120px;
+  font-size: 12px;
+  padding: 10px 12px;
+  margin: 10px 10px;
+  background-color: #4CCF40; 
+  border-color: #4CCF40; 
+  color: #fff;
+}
+
+.btn-half-outline {
+  width: 120px;
+  font-size: 12px;
+  padding: 10px 12px;
+  margin: 10px 10px; 
+  background-color: transparent; 
+  border-color: #4CCF40; 
+  color: #4CCF40;
+}
+
+.btn-half-solid:hover,
+.btn-half-solid:focus,
+.btn-half-solid.focus,
+.btn-full-solid:hover,
+.btn-full-solid:focus,
+.btn-full-solid.focus {
+  background-color: #339E2A;
+  border-color: #339E2A;
+  color: #fff;
+}
+
+.btn-half-outline:hover,
+.btn-half-outline:focus,
+.btn-half-outline.focus {
+  border-color: #339E2A; 
+  color: #339E2A;
+}
+
+
+
+.input {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 0px solid #ccc;
+} 
+
+.btn-permit-selector {
+  margin-left: -20px;
+  width: 300px;
+  display: inline-block;
+  padding: 0px 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: #F2F2F2;
+}
+
+.btn-permit-selector:hover,
+.btn-permit-selector:focus, 
+.btn-permit-selector.focus {
+  background-color: #DEDEDE;
+}
+
+
+
+
+.permits-sent-container,.permits-received-container {
+  border-top: 1px solid rgba(0,68,105,0.3);
+}
+
+.col-emp-1, .col-emp-2, .col-emp-3, .col-emp-4, .col-emp-5, .col-emp-6, .col-emp-7, .col-emp-8, .col-emp-9, .col-emp-0, .col-emp-11, .col-emp-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.col-emp-1, .col-emp-2 , .col-emp-3, .col-emp-4, .col-emp-5, .col-emp-6, .col-emp-7, .col-emp-8, .col-emp-9, .col-emp-0, .col-emp-11, .col-emp-12 {
+  float: left;
+}
+.col-emp-12 {
+  width: 100%;
+}
+.col-emp-11 {
+  width: 91.66666667%;
+}
+.col-emp-10 {
+  width: 83.33333333%;
+}
+.col-emp-9 {
+  width: 75%;
+}
+.col-emp-8 {
+  width: 66.66666667%;
+}
+.col-emp-7 {
+  width: 58.33333333%;
+}
+..col-emp-6 {
+  width: 50%;
+}
+.col-emp-5 {
+  width: 41.66666667%;
+}
+.col-emp-4 {
+  width: 33.33333333%;
+}
+.col-emp-3 {
+  width: 25%;
+}
+.col-emp-2 {
+  width: 16.66666667%;
+}
+.col-emp-1 {
+  width: 8.33333333%;
+}
+
