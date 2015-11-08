@@ -10,48 +10,46 @@
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style src="style.css"></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <script src="parse-1.6.7.min.js"></script>
     <script src="popup.js"></script>
   </head>
-  
+
   <body>
   <div class="login-page" id="login_page">
-    
     <div class="login-page-header">
-      
-      <row>
-        <a href="http://www.google.com">
-          <img class="login-page-logo" src="EmpowerName.png"></img>
+      <div class="row">
+        <a href="https://www.google.com">
+
+        <img class="login-page-logo" src="Empower-logo-dark-blue.png"></img>
         </a>
-      </row>
-    
+      </div>
     </div>
-    
+
     <div class="login-page-content">
-      <row>
-        
+      <div class="row">
         <form>
           <div class="input-group input-login-page">
-            <input type="text" name="username" id="username" class="form-control" placeholder="Email" style="border-radius: 5px; width: 240px;">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" style="border-radius: 5px; width: 240px;">
           </div>
+
           <div class="input-group input-login-page">
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
           </div> 
-            <!-- <button type="button" id="login" class="btn btn-default btn-full-width" style="color: #fff; width:240px; margin:0px 10px; background-color: #DB357A; border-color: #DB357A; padding: 10px 12px;">Log In</button> -->
 
-          <br>
+          <br/>
+          <div class="row ten-vpadding">
+              <button class="btn btn-half-solid" type="button" id="login" style="margin-right: 0px; margin-left: 11px; width: 112px;">Log In</button>
 
-          <button type="button" class="btn btn-default"  id="login" style="margin: 10px; width: 100px; background-color: #DB357A; border-color: #DB357A; color: #fff;">Log In</button>
-          <button type="button" class="btn btn-default"  id="signup" style="margin: 10px; margin: 10px; width: 100px; background-color: transparent; border-color: #fff; color: #fff;">Sign Up</button>
+              <button class="btn btn-half-outline" type="button" id="signup" style="margin-right: 0px; margin-left: 11px;  width: 112px;">Sign Up</button>
 
+          </div>
         </form>
-        
-      </row>
+      </div>
     </div>
-    
   </div>
-
-
   </body>
 </html>
 
