@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(
 		//alert("hey");
 		
 		if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
-			var myUsername = request.account;
+			var myUsername = request.username;
 			var myPassword = request.password;
 
 			// JetBlue, Brown SSO, Yale CAS login

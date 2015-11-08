@@ -31,14 +31,28 @@ window.onload = function() {
 		button.appendChild(t);
     button.id = object.id;
     button.class = "button";
+
     button.onclick = function() {
+      var account;
+      var Permissions = Parse.Object.extend("Permissions");
+      var query = new Parse.Query(Permissions);
+      query.get(this.id, {
+        success: function(permission) {
+          account = permission.get("account");
+          username = permission.get("account_username");
+          password = permission.get("account_password");
+          chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+            chrome.tabs.sendMessage(tabs[0].id, {username, password, account}, function(response) {
 
+          });  
+        });
+        },
+        error: function(object, error) {
+          alert("Error");
+        }
+      });
+      
 
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-    chrome.tabs.sendMessage(tabs[0].id, {account: "facebook", password: "pass"}, function(response) {
-
-    });  
-});
     };
 		document.getElementById('received_permit').appendChild(button);
 		
