@@ -52,7 +52,6 @@ chrome.runtime.onMessage.addListener(
 			}
 			// Twitter
 			else if (document.getElementById('signin-password') && myAccountType == "5") {
-				alert('Here!');
 				var userField = document.getElementById('signin-email');
 				var passwordField = document.getElementById('signin-password');
 
