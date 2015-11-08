@@ -1,15 +1,13 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
+
 <html>
   <head>
-    <title>Empower Popup</title>
+    <title>Empower</title>
     <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="style-2.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <style src="style-2.css"></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="popup.js"></script>
   </head>
   
@@ -18,16 +16,16 @@
     
     <div class="login-page-header">
       
-      <row>
+      <div class="row">
         <a href="http://www.google.com">
-          <img class="login-page-logo" src="EmpowerLogo.png"></img>
+          <img class="login-page-logo" src="Empower-logo-dark-blue.png"></img>
         </a>
-      </row>
+      </div>
     
     </div>
     
     <div class="login-page-content">
-      <row>
+      <div class="row">
         
         <form>
           <div class="input-group input-login-page">
@@ -37,12 +35,19 @@
             <input type="password" name="password" class="form-control" placeholder="Password" style="border-radius: 5px; width: 240px;">
           </div> 
           <br/>
-          <a href="setup-integrations.html">
-            <button type="button" id="login" class="btn btn-default btn-full-width" style="color: #fff; width:240px; margin:0px 10px; background-color: #DB357A; border-color: #DB357A; padding: 10px 12px;">Log In</button>
-          </a>
+          
+          <div class="row ten-vpadding">
+            <a href="active_permits.html">
+              <button class="btn btn-half-solid" type="button" id="log-in" style="margin-right: 0px; margin-left: 11px; width: 112px;">Log in</button>
+            </a>
+            
+            <a href="signup.html">
+              <button class="btn btn-half-outline" type="button" id="sign-up" style="margin-right: 0px; margin-left: 11px;  width: 112px;">Sign up</button>
+            </a>
+          </div>
         </form>
         
-      </row>
+      </div>
     </div>
     
   </div>

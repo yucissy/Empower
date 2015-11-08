@@ -8,7 +8,8 @@
   "content_scripts": [
     {
       "matches": ["https://book.jetblue.com/*"],
-      "js": ["action.js"]
+      "js": ["action.js"],
+      "css": ["style.css"]
     }
   ],
 

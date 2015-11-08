@@ -1,92 +1,92 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
-    <title>Empower Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        background-color:#2ba5fc;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-      select {
-        float:left;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+    <title>Empower</title>
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style-2.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <script src="parse-1.6.7.min.js"></script>
+    <script src="give_permit.js"></script>
   </head>
+  
   <body>
-  <h2>Give Permissions</h2>
-  <div id="give_permission">
-    Stand-In:<br>
-    <input type="text" name="standinname">
-    <br>
-    Gmail:<br>
-    <input type="text" name="gmail">
-    <br>
-    Password:<br>
-    <input type="password" name="gmailpass">
-    <br>
-    Facebook<br>
-    <input type="text" name="fb">
-    <br>
-    Password:<br>
-    <input type="password" name="fbpass">
-    <br>
-    JetBlue<br>
-    <input type="text" name="jb">
-    <br>
-    Password<br>
-    <input type="password" name="jbpass">
-    <br>
-    Time Limit<br>
-    <select>
-    <option value="0">0 hours</option>
-    <option value="1">1 hour</option>
-    <option value="2">2 hours</option>
-    <option value="3">3 hours</option>
-    <option value="4">4 hours</option>
-    <option value="5">5 hours</option>
-    <option value="6">6 hours</option>
-    </select>
+  <div class="page-wrapper"> 
+    
+    <div class="header">
+      <div class="header-content-wrapper" style="border-bottom: 1px solid rgba(0,68,105,0.3);">
+        <div class="row">
+          <div class="header-logo col-emp-6 pull-left">
+            <img src="Empower-logo-dark-blue.png" style="width: 80px;"></img>
+          </div>
+          <div class="header-help col-emp-6 pull-right">
+            <p> help </p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- close header -->
 
-    <select>
-    <option value="0">0 minutes</option>
-    <option value="5">5 minutes</option>
-    <option value="10">10 minutes</option>
-    <option value="15">15 minutes</option>
-    <option value="20">20 minutes</option>
-    <option value="25">25 minutes</option>
-    <option value="30">30 minutes</option>
-    <option value="35">35 minutes</option>
-    <option value="40">40 minutes</option>
-    <option value="45">45 minutes</option>
-    <option value="50">50 minutes</option>
-    <option value="55">55 minutes</option>
-    </select>
-    <button type="button" id="cancel">Cancel</button>
-    <button type="button" id="submit">Submit</button>
-</div>
+    <div class="content">
 
+       <div class="row ten-vpadding">
+         <p>Assign Permissions</p>
+       </div>
+     
+       <div class="row">
+           <div>
+                <div class="" style="padding-bottom: 50px;">
+                  <select class="form-control" id="account">
+                    <option value="" disabled selected hidden>Select an account</option>
+                    <option value="0">Gmail</option>
+                    <option value="1">Facebook</option>
+                    <option value="2">Yale CAS</option>
+                    <option value="3">Brown MCB</option>
+                    <option value="4">JetBlue</option>
+                  </select>
+                </div>
+                <div class="" style="padding-bottom: 15px;">
+                  <input type="text" class="form-control" id="account_username" placeholder="account email">
+                </div>
+                <div class="" style="padding-bottom: 25px;">
+                  <input type="text" class="form-control" id="account_password" placeholder="account password">
+                </div>
+                <div class="row">
+                  <div class="col-emp-6">
+                    <p>To who?</p>
+                    <input type="text" class="form-control col-emp-6" id="alias" placeholder="email" style="padding-left: 10px; margin-right: 5px; margin-left: 0px; width: 125px;">
+                  </div>
+                  <div class="col-emp-6">
+                    <p style="padding-left: 10px;">For how long?</p>
+                    <select class="form-control col-emp-6" id="hours" style="margin-right: 0px; margin-left: 5px;  width: 125px;">
+                      <option value="0">0 hours</option>
+                      <option value="1">1 hour</option>
+                      <option value="2">2 hours</option>
+                      <option value="3">3 hours</option>
+                      <option value="4">4 hours</option>
+                      <option value="5">5 hours</option>
+                      <option value="6">6 hours</option>
+                    </select>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            
+            <div class="row twenty-vpadding">
+              <div class="col-emp-6">
+                <a href="new_active_permits.html">
+                  <button class="btn btn-half-solid" type="button" id="submit" style="margin-right: 5px; margin-left: 0px; width: 125px;">Submit</button>
+                </a>
+              </div>
+              
+              <div class="col-emp-6">
+                <a href="new_active_permits.html">
+                  <button class="btn btn-half-outline" type="button" id="cancel" style="margin-right: 0px; margin-left: 5px;  width: 125px;">Cancel</button>
+                </a>
+              </div>
+           </div>
+           
+       </div>
 
+    </div> <!-- close content -->
+  </div> <!-- close page wrapper -->
   </body>
 </html>
-
