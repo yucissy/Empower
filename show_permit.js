@@ -35,8 +35,8 @@ window.onload = function() {
 
         button.onclick = function() {
           var account;
-          var Permissions = Parse.Object.extend("Permissions");
-          var query = new Parse.Query(Permissions);
+          var permission = new(Permissions);
+          var query = new Parse.Query(permission);
           query.get(this.id, {
             success: function(permission) {
               account = permission.get("account");
@@ -80,6 +80,29 @@ window.onload = function() {
     		  var t = document.createTextNode(y);
     		  button.appendChild(t);
           button.id = object.id;
+          button.class = "button";
+
+          button.onclick = function() {
+            var permission = new(Permissions);
+            var query = new Parse.Query(permission);
+            query.get(this.id, {
+              success: function(permission) {
+                permission.destroy({
+                  success: function(object) {
+                    window.location.reload() 
+                    // The object was deleted from the Parse Cloud.
+                  },
+                  error: function(object, error) {
+                    // The delete failed.
+                    // error is a Parse.Error with an error code and message.
+                  }
+                });
+              },
+              error: function(object, error) {
+                alert("Error");
+              }
+            });
+          };
 
     		  document.getElementById('sent_permit').appendChild(button);
           console.log(object.id + ' Username: ' + object.get('user') + ' Alias: ' + object.get('alias'));
