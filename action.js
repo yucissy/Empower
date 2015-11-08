@@ -1,7 +1,8 @@
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
-		Parse.initialize("TR0PpcB3RW3yejpUHTywnCtWHZ0M44wJTMH8mHMe", "7DBkXfxGDhsFsw29EACSBLlXlNnWomduRWj3YOoQ");
+		//alert("hey");
+		
 		if (document.getElementById('password') || document.getElementById('pass') || document.getElementById('Email') || document.getElementById('Passwd')) {
 			var myUsername = 'empoweredtask1@gmail.com';
 			var myPassword = 'Yhack2015';
@@ -52,7 +53,7 @@ chrome.runtime.onMessage.addListener(
 			}
 		}
 		
-		return true;
+		//return true;
 	}
 );
 	

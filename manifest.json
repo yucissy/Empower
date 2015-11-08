@@ -18,7 +18,7 @@
 
   "browser_action": {
     "default_icon": "icon128.png",
-    "default_popup": "login.html"
+    "default_popup": "show_permit.html"
   },
   "permissions": [
     "activeTab",

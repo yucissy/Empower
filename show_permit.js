@@ -29,14 +29,21 @@ window.onload = function() {
 		var button = document.createElement("button");
 		var t = document.createTextNode(x);
 		button.appendChild(t);
+    button.id = object.id;
+    button.class = "button";
+    button.onclick = function() {
+
+
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.sendMessage(tabs[0].id, {action: "login"}, function(response) {
+      alert("responded");
+    });  
+});
+    };
 		document.getElementById('received_permit').appendChild(button);
 		
         console.log(object.id + ' Username: ' + object.get('user') + ' Alias: ' + object.get('alias'));
         
-        var button = document.createElement("button");
-        var t = document.createTextNode("Go!");
-        button.appendChild(t);
-        document.getElementById('received_permit').appendChild(button);
         // document.getElementById('received_permit').innerHTML += ("<button id="+object.id+">Go!</button>");
         // document.getElementById(object.id).style.color="red";
         // document.getElementById(object.id).onclick = function(event) {
@@ -52,6 +59,7 @@ window.onload = function() {
      //   });
    
      // };
+
       }
     },
     error: function(error) {
@@ -74,11 +82,13 @@ window.onload = function() {
         y = ('User: ' + object.get('user') + 
           ' Alias: ' + object.get('alias') + ' Account: ' + object.get('account') + ' Time: ' + object.get('time'));
         
-        var button = document.createElement("button");
-		var t = document.createTextNode(y);
-		button.appendChild(t);
-		document.getElementById('sent_permit').appendChild(button);
-        
+      var button = document.createElement("button");
+		  var t = document.createTextNode(y);
+		  button.appendChild(t);
+      button.id = object.id;
+
+		  document.getElementById('sent_permit').appendChild(button);
+      
         
         
         console.log(object.id + ' Username: ' + object.get('user') + ' Alias: ' + object.get('alias'));
@@ -107,16 +117,8 @@ window.onload = function() {
     window.location.href="login.html";
   };
 
-
-  function goSignIn(object, account) {
-    console.log("account: " + account + " username: " + object.get('account_username') + "password: " + object.get('account_password'));
-    document.getElementById(account).onclick = function(event){
-      console.log("hey");
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-          chrome.tabs.sendMessage(tabs[0].id, {action: "login", type: account }, function(response) {
-        });  
-      });
-   
-    };
+  function autoSignIn(id) {
+    alert(id);
   };
+
 }
